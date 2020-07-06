@@ -1,3 +1,5 @@
+# 2 examples how to establish a connection to a non-local database
+
 import pandas as pd
 import pymysql
 from sshtunnel import SSHTunnelForwarder
