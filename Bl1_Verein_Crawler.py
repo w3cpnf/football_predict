@@ -1,5 +1,5 @@
 #web crawler to get football resutls, statistical sports data such as goals or shoots on the goal, the estimated value of the club, possession of the ball
-#and clubs strength from the game fifa. 
+#and clubs strength from the game fifa for the Bundesliga.
 
 
 #Parameter 
@@ -20,6 +20,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 
 
+#extract data and get data frame
 class get_df:
     
     def __init__(self, list_crawled):
@@ -35,6 +36,7 @@ class get_df:
         df = df[0].str.split('\n', expand = True)
         return df
  
+#transform object or string into integer
 class as_int:
     
     def __init__(self, df, case):
@@ -54,7 +56,7 @@ class as_int:
                 df.iloc[:,c] = df.iloc[:,c].astype(int)            
         return df
 
-    
+ #get date, year and week of the game day  
 class get_date_of_gameday:
 
     def __init__(self, spieltag, saison):
