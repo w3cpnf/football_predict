@@ -1,3 +1,7 @@
+#web crawler to get football resutls, statistical sports data such as goals or shoots on the goal, the estimated value of the club, possession of the ball
+#and clubs strength from the game fifa. 
+
+
 #Parameter 
 spieltag = 1
 columns_list = ['tore', 'torschusse' ,'torschusse-latte-pfosten', 'eigentore', 'elfmeter', 'elfmeter-verwandelt','gelbe-karten','fouls-am-gegner', 'zweikampfe-gewonnen',
@@ -234,7 +238,7 @@ class club_match_day_data:
                         
         return df_spiel
 
-
+#win = 1, draw = 0, defeat = -1
 class categorisation:
         
     def __init__(self, df_erg):       
