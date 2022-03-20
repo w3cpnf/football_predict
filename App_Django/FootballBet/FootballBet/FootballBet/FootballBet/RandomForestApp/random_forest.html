@@ -1,0 +1,57 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<h1> Random Forest Prediction </h1>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Main Page</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/Methods/ForecastLeagues/">Back</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<form action="{% url 'random_forest_results' %}">
+	<select class="select-toggle" multiple="multiple" name = "selectvariables" size="12" >
+	  <option value="Gegner_ID">Gegner_ID</option>
+	  <option value="Kaderwert">Kaderwert</option>
+	  <option value="FifaFeatures">FifaFeatures</option>
+	  <option value="Trainer">Trainer</option>
+	  <option value="Form">Form</option>
+	  <option value="Odds">Odds</option>
+	  <option value="System">System</option>
+	  <option value="GameData">GameData</option>
+	  <option value="Startelf">Startelf</option>
+	</select>
+	<div class="col-md-offset-1 col-md-1" >
+		<input type="text" class="form-control" placeholder="vereins_id" aria-label="vereins_id" name = "vereins_id">
+	</div>
+	<div class="col-md-offset-1 col-md-1">
+		<input type="text" class="form-control" placeholder="saison" aria-label="saison" name = "saison">
+	</div>
+	<div class="col-md-offset-1 col-md-1">
+		<input type="text" class="form-control" placeholder="spieltag" aria-label="spieltag" name = "spieltag">
+	</div>
+	<button type="submit" name = "randomforest" value = "randomforest" class="btn btn-primary btn-sm" >Start Algorithmus</button>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
